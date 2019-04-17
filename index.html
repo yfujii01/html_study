@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>HTMLの勉強</title>
+</head>
+
+<body>
+    hello world!
+    <button onclick="hoge()">hoge</button>
+    <div id="kontiwa">こんにちは</div>
+    <div class="hello">HELLO</div>
+    <div class="hello">HELLO</div>
+
+    <div>
+        <span onclick="world()">world</span>←クリックできるよ
+    </div>
+    <span onclick="world()" class="btn">world</span>←クリックできるよ
+
+    <hr>
+    <div>足し算を行う</div>
+    <div>
+        <input type="text" id="num1">
+        <input type="text" id="num2">
+        <button onclick="plus()">計算</button>
+    </div>
+    <hr>
+    <div>計算を行う</div>
+    <div>
+        <input type="text" id="calc_num1" value="0">
+        <select id="calc_select">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+        <input type="text" id="calc_num2" value="0">
+        <button onclick="calc()">計算</button>
+        <input type="text" id="calc_result" value="0">
+    </div>
+    <hr>
+
+</body>
+
+</html>
+
+<script>
+    function hoge() {
+        alert('hoge!');
+    }
+
+    function world() {
+        alert('world!');
+    }
+
+    // 足し算を行う
+    function plus() {
+        let num1 = Number(document.querySelector("#num1").value);
+        let num2 = Number(document.querySelector("#num2").value);
+        let num_calc = num1 + num2;
+        console.log(num_calc);
+        alert(num_calc);
+    }
+
+    // 計算を行う
+    function calc() {
+        let num1 = Number(document.querySelector("#calc_num1").value);
+        let num2 = Number(document.querySelector("#calc_num2").value);
+        let ope = document.querySelector("#calc_select").value;
+        let num_calc = 0;
+        console.log(ope);
+        switch (Number(ope)) {
+            case 1:
+                num_calc = num1 + num2;
+                break;
+            case 2:
+                num_calc = num1 - num2;
+                break;
+            case 3:
+                num_calc = num1 * num2;
+                break;
+            case 4:
+                num_calc = num1 / num2;
+                break;
+            default:
+                num_calc = -9999;
+        }
+
+        console.log(num_calc);
+        //alert(num_calc);
+        document.querySelector("#calc_result").value = num_calc;
+    }
+</script>
+
+<style>
+    #kontiwa {
+        color: red;
+    }
+
+    .hello {
+        color: blue;
+    }
+
+    .btn {
+        border: solid 1px;
+        border-radius: 200px;
+        padding: 0 10px 0 10px;
+        /* 上、右、下、左 */
+    }
+</style>
