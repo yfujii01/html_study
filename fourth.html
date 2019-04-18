@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>フォース</title>
+</head>
+
+<body>
+    <div>Ajaxを使用してjson形式の結果を受け取ってみる</div>
+    <div>素のJavaScriptのみ使用</div>
+    <button onclick="ajaxTest()">ajax</button>
+    <div><span>json = </span><span id="result"></span></div>
+    <div><span>id = </span><span id="result_id"></span></div>
+    <div><span>name = </span><span id="result_name"></span></div>
+    <div><span>age = </span><span id="result_age"></span></div>
+</body>
+
+</html>
+
+<script>
+
+    function ajaxTest() {
+        var req = new XMLHttpRequest();
+        req.onreadystatechange = function () {
+            if (req.readyState == 4) { // 通信の完了時
+                if (req.status == 200) { // 通信の成功時
+
+                    // 戻り値を文字列形式で取得
+                    let jsonStr = req.responseText;
+
+                    // 戻り値文字列(json)をオブジェクト形式に変換
+                    let json = JSON.parse(jsonStr);
+
+                    // DOM書き換え
+                    document.querySelector('#result').innerHTML = jsonStr;
+                    document.querySelector('#result_id').innerHTML = json.id;
+                    document.querySelector('#result_name').innerHTML = json.name;
+                    document.querySelector('#result_age').innerHTML = json.age;
+                }
+            } else {
+                result.innerHTML = "通信中...";
+            }
+        }
+
+        // XMLHttpRequestオブジェクト.open(HTTPメソッド, URL, 非同期モードで通信するか, ユーザー名, パスワード)
+        // ユーザー名とパスワードは認証が必要なページのみ指定。
+        req.open('GET', 'item.json', true);
+
+        // - openメソッドでPOSTにした場合は引数にリクエスト内容を指定
+        // - openメソッドでGETにした場合はnull
+        req.send(null);
+    }
+
+
+</script>
