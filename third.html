@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>サードページ</title>
+</head>
+
+<body onload="dispParam()">
+    <div>これはサードページです</div>
+    <div><a href="second.html">セカンドページに戻る</a></div>
+
+    <button onclick="alertParam()">パラメータ</button>
+
+    <div>あなたが送信したパラメータは</div>
+    <div id='dispparam'></div>
+    <div>ですね</div>
+
+    <button onclick="dispParam()">画面に受け取る</button>
+</body>
+
+</html>
+
+<script>
+    function dispParam() {
+        document.querySelector("#dispparam").innerText = getParam('hoge');
+    }
+
+    function alertParam() {
+        alert(getParam('hoge'))
+    }
+
+    function getParam(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+</script>
