@@ -5,15 +5,38 @@
 </head>
 
 <body>
-    hello world!
-
+    <div>JavaScriptのサンプル</div>
     <hr>
-    <ul>
-        <li><a href="sample_js.html">jsサンプル</a></li>
-        <li><a href="sample_css.html">cssサンプル</a></li>
-        <li><a href="sample_sendparam.html">パラメータ送信画面へのリンク</a></li>
-        <li><a href="sample_ajax.html">Ajaxサンプルへのリンク</a></li>
-    </ul>
+    <div><a href="index.html">インデックスページへのリンク</a></div>
+    <hr>
+    <button onclick="hoge()">hoge</button>
+   
+    
+    <div>
+        <span onclick="world()">world</span>←クリックできるよ
+    </div>
+    
+    <hr>
+    <div>足し算を行う</div>
+    <div>
+        <input type="text" id="num1" value="2">
+        <input type="text" id="num2" value="5">
+        <button onclick="plus()">計算</button>
+    </div>
+    <hr>
+    <div>計算を行う</div>
+    <div>
+        <input type="text" id="calc_num1" value="6">
+        <select id="calc_select">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+        <input type="text" id="calc_num2" value="7">
+        <button onclick="calc()">計算</button>
+        <input type="text" id="calc_result" value="0">
+    </div>
 </body>
 
 </html>
