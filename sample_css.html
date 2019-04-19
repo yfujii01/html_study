@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <title>css</title>
+</head>
+
+<body>
+    <div>cssのサンプル</div>
+    <div><a href="index.html">インデックスページへのリンク</a></div>
+
+
+    <div id="kontiwa">こんにちは</div>
+    <div class="hello">HELLO</div>
+    <div class="hello">HELLO</div>
+
+    <span>world</span>
+    <span class="btn">world(class=btn)</span>
+
+    <div class='bg1'>ほげ</div>
+    <div class='bg2'>ほが</div>
+    <div class='bg3'>ふげ</div>
+    <div class='bg4'>ふが</div>
+
+    <table class="mytable">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>名前</th>
+                <th>年齢</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>山田</td>
+                <td>99</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>田中</td>
+                <td>77</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>佐藤</td>
+                <td>88</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>↓<br>
+    あああ
+</body>
+
+</html>
+
+
+<style>
+    #kontiwa {
+        color: red;
+    }
+
+    .hello {
+        color: blue;
+    }
+
+    .btn {
+        border: solid 1px;
+        border-radius: 200px;
+        padding: 0 10px 0 10px;
+        /* 上、右、下、左 */
+    }
+
+    .bg1 {
+        background-color: #ff6666;
+        width: 50%;
+    }
+
+    .bg2 {
+        /*相対位置指定が可能*/
+        position: relative;
+        background-color: #66ff66;
+        width: 50%;
+        left: 50px;
+    }
+
+    .bg3 {
+        /*位置を固定する(スクロールは可能)*/
+        position: absolute;
+        background-color: #6666ff;
+        width: 50%;
+        left: 150px;
+        top: 50px;
+    }
+
+    .bg4 {
+        /*位置を固定する(スクロールしてもそのまま)*/
+        position: fixed;
+        background-color: #ff66ff;
+        width: 50%;
+        left: 200px;
+        top: 0px;
+    }
+
+    .mytable {
+        border: solid red 1px;
+
+        /*隙間をなくす*/
+        border-collapse: collapse;
+    }
+
+    .mytable th {
+        background: #99fff9;
+        border: solid black 1px;
+    }
+
+    .mytable td {
+        border: solid black 1px;
+    }
+</style>

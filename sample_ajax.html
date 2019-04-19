@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>フォース</title>
+    <title>ajax</title>
 </head>
 
 <body>
@@ -45,7 +45,8 @@
 
         // XMLHttpRequestオブジェクト.open(HTTPメソッド, URL, 非同期モードで通信するか, ユーザー名, パスワード)
         // ユーザー名とパスワードは認証が必要なページのみ指定。
-        req.open('GET', 'item.json', true);
+        let targetPath = 'item.json';
+        req.open('GET', targetPath, true);
 
         // - openメソッドでPOSTにした場合は引数にリクエスト内容を指定
         // - openメソッドでGETにした場合はnull
