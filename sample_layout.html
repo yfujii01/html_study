@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>レイアウトサンプル</title>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">index</a></li>
+            <li><a href="sample_layout.html">layout</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="content-left">左</div>
+        <div class="content-center">中</div>
+        <div class="content-right">右</div>
+    </div>
+    <div class="footer">フッター</div>
+</body>
+
+</html>
+
+<style>
+    .nav {
+        background-color: #777777;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 30px;
+        z-index: 1;
+    }
+
+    ul {
+        /* 点を非表示 */
+        list-style: none;
+        /* 横並びにする */
+        display: flex;
+        padding: 0 0 0 10px;
+        margin: 0;
+    }
+
+    li {
+        padding: 0 0 0 10px;
+    }
+
+    .content {
+        position: absolute;
+        display: flex;
+        background-color: #FFFF77;
+        width: 100%;
+        left: 0;
+        top: 30px;
+        height: 900px;
+    }
+
+    .content-left {
+        background-color: #FF7777;
+        width: 150px;
+    }
+
+    .content-center {
+        background-color: #77FF77;
+        flex: 1;
+    }
+
+    .content-right {
+        background-color: #7777FF;
+        width: 150px;
+    }
+
+    .footer {
+        position: fixed;
+        background-color: #FF77FF;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+    }
+</style>

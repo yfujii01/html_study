@@ -1,20 +1,40 @@
 # html_study
 
 ## デモページ
-
 https://yfujii01.github.io/html_study/
 
+## 環境構築方法
 
-* index.html
+1. Git for Windowsをインストール
+1. GitHubアカウントを作成
+1. GitHubの<a href="https://github.com/yfujii01/html_study">yfujii01/html_study</a>をforkする
+1. ターミナルを開きGitHubからプロジェクトをcloneする
+    ```
+    $ git clone https://github.com/【自分のアカウント名】/html_study.git
+    ```
+1. VSCodeをインストール
+1. VSCode拡張のLive Serverをインストール
+1. index.htmlを右クリックしてOpen with Live Serverを選択
 
-cssとjavascriptの基本
+## ページ説明
 
-* second.html
+* index.html  
+各種ページへのリンク
 
-aリンクの書き方とフォーム(get)を使ったパラメータ渡し
+* sample_js.html  
+JavaScriptの実装サンプル
 
-※postを使った渡し方もあるけど、それはバックエンド用の言語でないと受信できない
+* sample_css.html  
+CSSの実装サンプル
 
-* third.html
+* sample_sendparam.html  
+formをgetで送信するサンプル
 
-getパラメータをjavascriptで受け取る方法
+* sample_getparam.html  
+get送信されたパラメータを受け取るサンプル
+
+* sample_ajax.html  
+ajaxを使用したjson受信サンプル
+
+* sample_layout.html  
+よくあるサイト構成のサンプル
