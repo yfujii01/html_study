@@ -11,33 +11,48 @@
     <div><a href="sample_sendparam.html">パラメータ送信画面に戻る</a></div>
     <hr>
 
-    <button onclick="alertParam()">パラメータ</button>
-
     <div>あなたが送信したパラメータは</div>
-    <div id='dispparam'></div>
+    <hr>
+    ID<div id='disp_txt'></div>
+    <hr>
+    PWD<div id='disp_pwd'></div>
+    <hr>
+    CHECK BOX<div id='disp_chk'></div>
+    <hr>
+    RADIO<div id='disp_radio'></div>
+    <hr>
+    TEXT AREA<div id='disp_area'></div>
+    <hr>
     <div>ですね</div>
-
-    <button onclick="dispParam()">画面に受け取る</button>
 </body>
 
 </html>
 
 <script>
     function dispParam() {
-        document.querySelector("#dispparam").innerText = getParam('hoge');
+        document.querySelector("#disp_txt").innerText = getParam('hoge_txt');
+        document.querySelector("#disp_pwd").innerText = getParam('hoge_pwd');
+        document.querySelector("#disp_chk").innerText = getParam('hoge_chk');
+        document.querySelector("#disp_radio").innerText = getParam('hoge_radio');
+        document.querySelector("#disp_area").innerText = getParam('hoge_area');
     }
 
-    function alertParam() {
-        alert(getParam('hoge'))
-    }
+    function getParam(name) {
+        let url = window.location.href;
 
-    function getParam(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
+        console.log('name = ' + name);
+        let name2 = name.replace(/[\[\]]/g, "\\$&");
+        console.log('name2 = ' + name2);
+        let regex = new RegExp("[?&]" + name2 + "(=([^&#]*)|&|#|$)");
+        console.log('regex = ' + regex);
+        let results = regex.exec(url);
+        console.log('results = ' + results);
+        if (!results) {
+            return null;
+        }
+        if (!results[2]) {
+            return '';
+        }
         return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
 </script>

@@ -1,17 +1,39 @@
 <html>
-    <head>
-        <title>sendParam</title>
-    </head>
-    <body>
-        <div>これはパラメータ送信のサンプルです。</div>
-        <hr>
-        <div><a href="index.html">インデックスページへのリンク</a></div>
-        <hr>
 
-        <form action="sample_getparam.html">
-            <input type="text" name="hoge" value="hogehoge"/>
+<head>
+    <title>sendParam</title>
+</head>
+
+<body>
+    <div>これはパラメータ送信のサンプルです。</div>
+    <hr>
+    <div><a href="index.html">インデックスページへのリンク</a></div>
+    <hr>
+
+    <form action="sample_getparam.html">
+        <div>
+            ID<input type="text" name="hoge_txt" value="hogehoge" />
+        </div>
+        <div>
+            PASS<input type="password" name="hoge_pwd" value="password00">
+        </div>
+        <div>
+            <input type="checkbox" name="hoge_chk" checked>あなたが○○の場合チェックを付けてください
+        </div>
+        <div>
+            大<input type="radio" name="hoge_radio" value="1">
+            中<input type="radio" name="hoge_radio" value="2" checked>
+            小<input type="radio" name="hoge_radio" value="3">
+
+        </div>
+        <div>
+            <textarea name="hoge_area">本日は晴天なり</textarea>
+        </div>
+        <div>
             <input type="submit" value="送信">
             <input type="reset" value="クリア">
-        </form>
-    </body>
+        </div>
+    </form>
+</body>
+
 </html>
