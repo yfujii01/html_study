@@ -56,9 +56,9 @@ $ git push origin master
 ```
 
 2. GitHubのリポジトリをブラウザで開く
-3. タブからSettingsを選択
+3. タブからSettingsを選択  
 ![](img/2019-04-20-23-43-40.png)
-4. GitHub Pagesの設定箇所までスクロール
+4. GitHub Pagesの設定箇所までスクロール  
 ![](img/2019-04-20-23-44-26.png)
-5. Sourceを「master branch」に設定
+5. Sourceを「master branch」に設定  
 ![](img/2019-04-20-23-44-51.png)
