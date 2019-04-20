@@ -41,5 +41,24 @@ ajaxを使用したjson受信サンプル
 
 ## 課題
 
-1. 新しいページを作成しよう  
-   
+1. 以下のサイトを真似して作ってみよう(※似たようなものができればOK)  
+https://kyokou.netlify.com/
+2. 作成したサイトに対するリンクをindex.htmlに作成すること
+3. GitHubにpushしてGitHub Pagesの設定をして公開してみよう
+
+## GitHub Pages公開手順
+
+1. GitHubに変更をpushする  
+```
+$ git add -A
+$ git commit -m '変更のコミット'
+$ git push origin master
+```
+
+2. GitHubのリポジトリをブラウザで開く
+3. タブからSettingsを選択
+![](img/2019-04-20-23-43-40.png)
+4. GitHub Pagesの設定箇所までスクロール
+![](img/2019-04-20-23-44-26.png)
+5. Sourceを「master branch」に設定
+![](img/2019-04-20-23-44-51.png)
