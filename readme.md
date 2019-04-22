@@ -1,9 +1,20 @@
 # html_study
 
+HTML + JavaScript + CSSを使うことでどういったことができるのかを覚えていきましょう。
+
+このリポジトリではjQueryやBootStrapといったようなフレームワークは使用していません。
+
 ## デモページ
+
+まずはデモページを確認していきましょう。
+
 https://html-study.netlify.com/
 
+
 ## 環境構築方法
+
+ローカルで開発・実行する場合は以下の手順を実施します。  
+※環境構築には様々は手順が存在します。紹介する手順はあくまで1つの例です。
 
 1. Git for Windowsをインストール
 1. GitHubアカウントを作成
@@ -16,7 +27,10 @@ https://html-study.netlify.com/
 1. VSCode拡張のLive Serverをインストール
 1. index.htmlを右クリックしてOpen with Live Serverを選択
 
-## ページ説明
+## ページ説明(概要)
+
+サンプルページは以下の種類を用意しています。  
+一つずつソースを見てみましょう。
 
 * index.html  
 各種ページへのリンク
@@ -37,14 +51,14 @@ get送信されたパラメータを受け取るサンプル
 ajaxを使用したjson受信サンプル
 
 * sample_layout.html  
-よくあるサイト構成のサンプル
+よくあるサイト構成のサンプル(html + cssのみ)
 
 ## 課題
 
-1. 以下のサイトを真似して作ってみよう(※似たようなものができればOK)  
+1. 以下のサイトを真似して作ってみよう(※似たようなものができればOKです)  
 https://kyokou.netlify.com/
-2. 作成したサイトに対するリンクをindex.htmlに作成すること
-3. GitHubにpushしてNetlifyに連携して公開してみよう
+1. 作成したサイトに対するリンクをindex.htmlに作成すること
+1. GitHubにpushしてNetlifyに連携して公開してみよう
 
 ## Netlify公開手順
 
