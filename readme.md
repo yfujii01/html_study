@@ -46,7 +46,7 @@ https://kyokou.netlify.com/
 2. 作成したサイトに対するリンクをindex.htmlに作成すること
 3. GitHubにpushしてNetlifyに連携して公開してみよう
 
-## NetLify公開手順
+## Netlify公開手順
 
 https://www.netlify.com/
 
