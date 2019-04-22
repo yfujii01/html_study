@@ -44,9 +44,11 @@ ajaxを使用したjson受信サンプル
 1. 以下のサイトを真似して作ってみよう(※似たようなものができればOK)  
 https://kyokou.netlify.com/
 2. 作成したサイトに対するリンクをindex.htmlに作成すること
-3. GitHubにpushしてGitHub Pagesの設定をして公開してみよう
+3. GitHubにpushしてNetlifyに連携して公開してみよう
 
-## GitHub Pages公開手順
+## NetLify公開手順
+
+https://www.netlify.com/
 
 1. GitHubに変更をpushする  
 ```
@@ -54,11 +56,9 @@ $ git add -A
 $ git commit -m '変更のコミット'
 $ git push origin master
 ```
-
-2. GitHubのリポジトリをブラウザで開く
-3. タブからSettingsを選択  
-![](img/2019-04-20-23-43-40.png)
-4. GitHub Pagesの設定箇所までスクロール  
-![](img/2019-04-20-23-44-26.png)
-5. Sourceを「master branch」に設定  
-![](img/2019-04-20-23-44-51.png)
+1. アカウントを持っていない場合はSingUpする(GitHubアカウント連携でOK)  
+1. New site from Gitボタン押下  
+1. Continuous DeploymentでGitHubを選択  
+1. リポジトリを選択  
+1. Deploy siteボタン押下  
+※ settingのChange site nameからドメイン名を変更可能
