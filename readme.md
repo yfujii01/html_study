@@ -1,7 +1,7 @@
 # html_study
 
 ## デモページ
-https://yfujii01.github.io/html_study/
+https://html-study.netlify.com/
 
 ## 環境構築方法
 
